@@ -1,0 +1,172 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #f6f6f6;
+  --secondary-color: #2e2e2e;
+  --third-color: #6d21c5;
+}
+html{
+  font-size: 18px;
+}
+body{
+  font-family: 'Helvetica', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+
+}
+
+ul{
+    list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: all 0.2s ease;
+}
+a:hover{
+  color: var(--third-color);
+}
+button{
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  padding: 12px 16px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-family: 'Helvetica', sans-serif;
+}
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: #e6e6e6;
+  border: none;
+}
+.btn-primary:hover{
+  background-color: var(--third-color);
+}
+.btn-secondary{
+  background-color: #e3e3e3;
+}
+.btn-secondary:hover{
+  background-color: #cecece;
+}
+.mb-1{
+  margin-bottom: 1rem;
+}
+.mb-2{
+  margin-bottom: 2rem;
+}
+.mb-3{
+  margin-bottom: 3rem;
+}
+.form-control{
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+}
+/*header*/
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  flex-wrap: wrap;
+}
+.navbar-brand img{
+  width: 200px;
+  height: auto;
+  object-fit: cover ;
+}
+.navbar-nav{
+  display: flex;
+}
+.nav-link{
+  padding: 20px 12px;
+}
+.star-active{
+  color: var(--third-color);
+}
+.star-disabled{
+  color: rgba(215, 215, 215, 0.84);
+}
+.table{
+    width: 800px;
+    margin: 0 auto;
+  border-collapse: collapse;
+  border: 2px solid #ce9cff;
+}
+.table td, th{
+  padding: 12px!important;
+  border-bottom: 2px solid #ce9cff;
+  text-align: start;
+}
+.my-1{
+  margin: 1rem 0;
+}
+.my-2{
+  margin: 2rem 0;
+}
+.text-center{
+  text-align: center;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+.btn-pagination{
+  background-color: #e3e3e3;
+}
+.btn-pagination:hover{
+  background-color: var(--third-color);
+  color: var(--primary-color);
+}
+.btn-pagination-active{
+  background-color: var(--third-color);
+  color: var(--primary-color);
+}
+.text-underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accordion{
+  cursor: pointer;
+}
+.accordion > div{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  padding: 1rem 0;
+  overflow-y: hidden;
+}
+
+.accordion-arrow{
+  font-size: 1.25rem;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  transition: all 0.2s ease;
+}
+
+.accordion-body{
+  max-height: 0;
+  padding: 0!important;
+  transition: all 0.2s ease;
+  background-color: #cecece;
+  overflow: hidden;
+
+}
+.accordion-head:has(~input[type="checkbox"]:checked) .accordion-arrow{
+  font-size: 1.25rem;
+  font-weight: bold;
+  transform: rotate(90deg);
+  transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked + .accordion-body{
+  max-height: 100%;
+  padding: 1rem 0.25rem!important;
+}
